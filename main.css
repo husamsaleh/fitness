@@ -1,0 +1,145 @@
+:root {
+  --white: #ffffff;
+  --main: black;
+  --secondary: #ffbf00;
+  --secondary-dark: #b88a01;
+}
+
+.navbar-toggler-icon {
+  font-size: 12px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+  font-size: 12px;
+  border-color: rgb(255, 255, 255);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::-moz-selection {
+  color: rgb(255, 255, 255);
+  background-color: var(--main);
+}
+
+::selection {
+  color: rgb(255, 255, 255);
+  background-color: var(--main);
+}
+
+body {
+  background: var(--main);
+}
+
+nav {
+  z-index: 200;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.274);
+}
+
+#totoppls {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 1111;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: black;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 22px;
+  /* Increase font size */
+  max-width: 50px;
+  min-width: 60px;
+}
+
+#totoppls:hover {
+  background-color: var(--main-color);
+  /* Add a dark-grey background on hover */
+}
+
+.navbar-brand {
+  font-size: 32px;
+}
+
+.search input {
+  padding: 10px;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.61);
+  border: 1px rgba(255, 255, 255, 0.247) solid;
+  margin-right: 50px;
+}
+.search input::-webkit-input-placeholder {
+  color: var(--secondary);
+}
+.search input::-moz-placeholder {
+  color: var(--secondary);
+}
+.search input:-ms-input-placeholder {
+  color: var(--secondary);
+}
+.search input::-ms-input-placeholder {
+  color: var(--secondary);
+}
+.search input::placeholder {
+  color: var(--secondary);
+}
+
+.carousel-item img {
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+@media screen and (max-width: 790px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.551);
+    width: 107%;
+  }
+  .navbar .navbar-brand {
+    font-size: 18px;
+  }
+
+  .search {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .search {
+    margin-right: 10px;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+  }
+
+  .nav-item a {
+    font-size: 14px;
+  }
+}
