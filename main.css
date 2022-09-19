@@ -1,8 +1,20 @@
 :root {
   --white: #ffffff;
-  --main: black;
-  --secondary: #ffbf00;
-  --secondary-dark: #b88a01;
+  --main: #FFFFFF;
+  --secondary: #03e312;
+  --secondary-dark: #02c50f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .navbar-toggler-icon {
@@ -13,18 +25,6 @@
 .navbar-toggler {
   font-size: 12px;
   border-color: rgb(255, 255, 255);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 ::-moz-selection {
@@ -44,7 +44,13 @@ body {
 nav {
   z-index: 200;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.274);
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.327);
+  text-transform: uppercase;
+}
+nav .nav-link {
+  color: rgb(255, 255, 255) !important;
+  margin: auto 20px;
 }
 
 #totoppls {
@@ -84,7 +90,8 @@ nav {
 }
 
 .navbar-brand {
-  font-size: 32px;
+  font-size: 42px;
+  color: white;
 }
 
 .search input {
@@ -117,6 +124,154 @@ nav {
   width: 100%;
 }
 
+.mbtn {
+  background-color: var(--secondary);
+}
+.mbtn:hover {
+  background-color: var(--secondary-dark) !important;
+  color: white !important;
+}
+
+.se1 {
+  margin-top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: calc(100vh - 90px) !important;
+}
+.se1 .inimg {
+  background-image: url(/images/r.jpg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+.se1 div {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.se1 .wr {
+  position: relative;
+}
+.se1 .wr .mytxt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.se1 .wr .mytxt h2 {
+  color: var(--secondary);
+  font-size: 82px;
+  text-transform: uppercase;
+}
+
+.vid-c {
+  position: relative;
+  background-color: black;
+}
+.vid-c video {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+.vid-c .txt-v {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 222;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.vid-c h2 {
+  font-size: 62px;
+  z-index: 222;
+  position: relative;
+  color: white;
+  text-shadow: 0px 0px 3px var(--secondary);
+}
+.vid-c .scroll-down {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in 3s;
+  transition: all 0.5s ease-in 3s;
+}
+.vid-c .scroll-down {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #FFF;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.vid-c .scroll-down:before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid white;
+  border-width: 0px 0 2px 2px;
+}
+@-webkit-keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+.modal-body input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.modal-body button {
+  background: var(--secondary);
+  color: var(--main);
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 790px) {
   .navbar {
     background-color: rgba(0, 0, 0, 0.551);
@@ -135,8 +290,13 @@ nav {
     margin-right: 10px;
   }
 
+  .navbar {
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
+  }
+
   .navbar-brand {
-    font-size: 28px;
+    font-size: 38px !important;
   }
 
   .nav-item a {
