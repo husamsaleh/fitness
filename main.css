@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
   --white: #ffffff;
   --main: #FFFFFF;
@@ -10,7 +11,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Cairo", sans-serif, Arial;
 }
 
 html {
@@ -190,21 +191,38 @@ nav .nav-link {
   font-size: 62px;
   color: var(--secondary);
   text-align: center;
-  text-transform: uppercase;
   margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-shadow: 0px 0px 1px black;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.se2 .mytxt2 h3:hover {
+  background: black;
+  padding: 0 50px;
 }
 .se2 .mytxt2 p {
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 22px;
 }
 .se2 .mytxt2 .tbx {
-  background-color: var(--secondary);
+  color: white;
+  background-color: black;
   padding: 20px;
   border-radius: 14px;
   border: 4px white solid;
+  width: 125%;
+}
+
+.se3 {
+  height: 100vh;
 }
 
 .vid-c {
+  height: 100%;
   position: relative;
   background-color: black;
 }
@@ -212,6 +230,8 @@ nav .nav-link {
   width: 100%;
   height: 100%;
   background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .vid-c .txt-v {
   position: absolute;
@@ -305,6 +325,99 @@ nav .nav-link {
   border-radius: 4px;
 }
 
+.se4 {
+  height: 100vh;
+}
+.se4 .wr {
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.exe,
+.fo {
+  background-color: black;
+  color: white;
+  padding: 30px 40px 80px 40px;
+  border-radius: 10px;
+  min-width: 350px;
+  text-align: center;
+}
+.exe h2,
+.fo h2 {
+  font-size: 52px;
+}
+.exe ol,
+.fo ol {
+  padding-top: 20px;
+  text-align: start;
+}
+.exe ol li,
+.fo ol li {
+  color: white;
+  font-size: 28px;
+}
+
+.se5 h2 {
+  margin-right: 80px;
+  font-size: 52px;
+}
+.se5 form {
+  border-radius: 10px;
+}
+.se5 form input {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+}
+.se5 form input::-webkit-input-placeholder {
+  color: var(--secondary-dark);
+}
+.se5 form input::-moz-placeholder {
+  color: var(--secondary-dark);
+}
+.se5 form input:-ms-input-placeholder {
+  color: var(--secondary-dark);
+}
+.se5 form input::-ms-input-placeholder {
+  color: var(--secondary-dark);
+}
+.se5 form input::placeholder {
+  color: var(--secondary-dark);
+}
+.se5 form button {
+  color: var(--secondary-dark);
+  background-color: rgb(0, 0, 0);
+  margin-left: 5px;
+  padding: 5px 15px;
+}
+
+.footer {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: var(--secondary-dark);
+  padding: 50px 0;
+  margin-top: 100px;
+}
+.footer a {
+  margin: 0 10px;
+}
+.footer a i {
+  color: black;
+  font-size: 36px;
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+}
+.footer a i:hover {
+  color: white;
+}
+
 @media screen and (max-width: 790px) {
   .navbar {
     background-color: rgba(0, 0, 0, 0.551);
@@ -334,5 +447,28 @@ nav .nav-link {
 
   .nav-item a {
     font-size: 14px;
+  }
+
+  .exe,
+.fo {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    min-width: 250px;
+    text-align: center;
+  }
+  .exe h2,
+.fo h2 {
+    font-size: 32px;
+  }
+  .exe ol,
+.fo ol {
+    padding-top: 10px;
+    text-align: start;
+  }
+  .exe ol li,
+.fo ol li {
+    color: white;
+    font-size: 18px;
   }
 }
