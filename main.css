@@ -148,7 +148,7 @@ nav .nav-link {
   height: 100vh !important;
 }
 .se1 .inimg {
-  background-image: url(/images/r.jpg);
+  background-image: url(./images/r.jpg);
   width: 100%;
   height: auto;
   background-repeat: no-repeat;
